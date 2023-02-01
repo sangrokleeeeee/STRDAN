@@ -1,0 +1,16 @@
+python train_xent_tri.py -s aicity -t aicity \
+--height 384 \
+--width 384 \
+--optim amsgrad \
+--lr 0.0003 \
+--max-epoch 150 \
+--stepsize 20 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 \
+--train-batch-size 32 \
+--test-batch-size 100 \
+-a resnet50 \
+--save-dir log/resnet50-type-final \
+--gpu-devices 0 \
+--train-sampler sim \
+--include-sim \
+--random-erase \
+--include-type
